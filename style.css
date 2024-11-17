@@ -20,16 +20,28 @@ h1{
 .container div{
     background-color: white;
     height: 40px;
-    border: 5px solid rgb(247, 197, 151);
+    border: 5px  solid rgb(247, 197, 151);
  
 }
 
 
 .item {
   display: grid;
-  grid-template-columns: 410px;
+  grid-template-columns: 110px 310px;
   justify-content: center;
   margin-top: 20px;
+  margin-left: -5px;
+}
+#clear{
+    border:5px solid  rgb(247, 197, 151) ;
+   
+}
+.clear{
+    background-color:rgb(247, 197, 151) ;
+    height: 30px;
+    width: 100%;
+    border: none;
+    font-size: 18px;
 }
 .item div{
     width: 100%;
@@ -63,7 +75,7 @@ select{
 margin-top: 10px;
 width: 50px;
 }
-button{
+#add, #submit{
    margin-top: 50px;
    height: 40px;
    border: 5px solid rgb(247, 197, 151);

@@ -66,9 +66,10 @@ let addButton = document.getElementById("add");
             document.body.appendChild(container);
     });
   
-  
+           
        
             let submit = document.getElementById("submit");
+            let myNull;
             submit.addEventListener("click",()=>{
                 let displayPara = document.getElementById("para");
                 displayPara.innerHTML = "";
@@ -91,8 +92,12 @@ let addButton = document.getElementById("add");
                         values[i]=0;
                     }else{
                         values[i]=null;
+                        myNull = values[i];
                     }
+                    
                 }
+                
+                
                 const gradeXUnit= values.map((value, index)=>value*unit[index]);
                 let sum = 0;
                 console.log(gradeXUnit);
@@ -109,7 +114,18 @@ let addButton = document.getElementById("add");
                     display.textContent = " "+total.toFixed(2);
                     display.className = "diplay";
                     displayPara.appendChild(display);
+                   for(let i= 0; i<values.length; i++){
+                    if(values[i]===myNull){
+                        display.textContent=" Input correct value";
+                    }
+                   }
+                   
            
+            });
+            let clear = document.querySelector("#clear");
+            clear.addEventListener("click", ()=>{
+                let displayPara = document.getElementById("para");
+                displayPara.innerHTML = "";
             });
           
          
