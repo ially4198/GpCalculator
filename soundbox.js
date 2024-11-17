@@ -77,17 +77,17 @@ let addButton = document.getElementById("add");
                 inputElement3 = document.querySelectorAll(".myunit");
                 let unit = Array.from(inputElement3).map(input => input.value);  
                 for (let i= 0; i<values.length; i++){
-                    if(values[i] ==="A" || values[i] ==="a"){
+                    if(values[i] ==="A" || values[i] ==="a" || values[i]>= 70){
                         values[i] =5;
-                    }else if(values[i]==="B" || values[i] ==="b"){
+                    }else if(values[i]==="B" || values[i] ==="b" || values[i]>= 60){
                         values[i]=4;
-                    }else if(values[i]==="C" || values[i] ==="c"){
+                    }else if(values[i]==="C" || values[i] ==="c" || values[i]>= 50){
                         values[i]=3;
-                    }else if(values[i]==="D" || values[i] ==="d"){
+                    }else if(values[i]==="D" || values[i] ==="d" || values[i]>= 45){
                         values[i]=2;
-                    }else if(values==="E" || values[i] ==="e"){
+                    }else if(values==="E" || values[i] ==="e" || values[i]>= 40){
                         values[i]=1;
-                    }else if(values[i]==="F" || values[i] ==="f"){
+                    }else if(values[i]==="F" || values[i] ==="f" || values[i]>= 0){
                         values[i]=0;
                     }else{
                         values[i]=null;
